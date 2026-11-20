@@ -35,7 +35,7 @@ const eliminarTarea = (id) => { // Creamos la funcion eliminarTarea y en los par
 }
 
 agregarTarea("Tarea 3"); // Agregamos una nueva tarea
-mostrarTareas(); //invocamos la función para mostrar las tareas
-completarTarea(); // Completamos la tarea con id 1
-eliminarTarea(); // Eliminamos la tarea con id 2
+completarTarea(1); // Completamos la tarea con id 1
+eliminarTarea(2); // Eliminamos la tarea con id 2
+mostrarTareas();
 
