@@ -39,3 +39,22 @@ completarTarea(1); // Completamos la tarea con id 1
 eliminarTarea(2); // Eliminamos la tarea con id 2
 mostrarTareas();
 
+const filtrarPorEstado = (estado) => {
+    const tareasFiltradas = tareas.filter((tarea) => tarea.completada === estado)
+
+    tareasFiltradas.forEach((tareaFiltrada) => {
+        console.log(`ID : ${tareaFiltrada.id}, Nombre de la tarea: ${tareaFiltrada.nombre}, Estado de la tarea: ${tareaFiltrada.completada === true ? "Completada" : "Incompleta"}`)
+    })
+}
+
+const mostrarResumen = () => {
+    const ResumenDeTareas = tareas.length
+    const TareasCompletadas = tareas.filter((tarea) => tarea.completada === true).length
+    const TareasIncompletas = tareas.filter((tarea) => tarea.completada === false).length
+    
+    console.log(`Las tareas totales son: ${ResumenDeTareas}, las tareas que se han completado son: ${TareasCompletadas} y las tareas incompletas son: ${TareasIncompletas}`)
+}
+
+filtrarPorEstado(true) // Filtramos las tareas completadas
+mostrarResumen() // Mostramos el resumen de las tareas
+
